@@ -244,61 +244,50 @@
                     </p>
                     <form class="forms-sample">
                       <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
+                        <label for="productName"> Software Name</label>
                         <input
                           type="text"
                           class="form-control"
-                          id="exampleInputName1"
+                          id="productName"
                           placeholder="Name" />
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail3">Email address</label>
+                        <label for="productVersion">Software Version</label>
                         <input
-                          type="email"
+                          type="text"
                           class="form-control"
-                          id="exampleInputEmail3"
-                          placeholder="Email" />
+                          id="productVersion"
+                          placeholder="Version" />
+                      </div>
+                      <div class="form-group">
+                        <label for="productPrice">Software Price</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="productPrice"
+                          placeholder="Price" />
                       </div>
 
-                      <div class="form-group">
-                        <label>File upload</label>
-                        <input
-                          type="file"
-                          name="img[]"
-                          class="file-upload-default" />
-                        <div
-                          class="input-group col-xs-12 d-flex align-items-center">
-                          <input
-                            type="text"
-                            class="form-control file-upload-info"
-                            disabled
-                            placeholder="Upload Image" />
-                          <span class="input-group-append ms-2">
-                            <button
-                              class="file-upload-browse btn btn-primary"
-                              type="button">
-                              Upload
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="exampleTextarea1">Message</label>
-                        <textarea
-                          class="form-control"
-                          id="exampleTextarea1"
-                          rows="4"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary me-2">
+                      <button type="submit" id="addProduct" class="btn btn-primary me-2">
                         Submit
                       </button>
-                      <button class="btn btn-light">Save as draft</button>
-                      <button class="btn btn-danger text-light">Cancel</button>
+                      <!-- <button type="button" class="btn btn-primary">Delete</button> -->
                     </form>
                   </div>
                 </div>
               </div>
+              <table class="mb-5 border-bottom" id="printable">
+                <thead>
+                  <th>Name</th>
+                  <th>Version</th>
+                  <th>Price</th>
+                  
+                </thead>
+                <tbody id="productData"></tbody>
+              </table>
+              <h4 id="totalAmount"></h4>
+              <button onclick="generatingpdf()" class="btn btn-primary me-2 w-25">Print</button>
+
             </div>
           </div>
           <!-- content-wrapper ends -->
@@ -334,7 +323,7 @@
     <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="../../assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <!-- <script src="../../assets/vendors/typeahead.js/typeahead.bundle.min.js"></script> -->
     <script src="../../assets/vendors/select2/select2.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
@@ -348,5 +337,6 @@
     <script src="../../assets/js/typeahead.js"></script>
     <script src="../../assets/js/select2.js"></script>
     <!-- End custom js for this page-->
+    <script src="billing.js"></script>
   </body>
 </html>
